@@ -1,0 +1,22 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+    <div>
+        <h1>This is the Car Page</h1>
+    </div>
+    <div>
+        <h2>List of Cars:</h2>
+        <ul>
+            {% for car in cars %}
+                <a href="/cartype/{{ car.id }}" style="display: block; margin-bottom: 10px;">
+                    <span style="display: block;">
+                        {{ car.brand }} - {{ car.model }}
+                    </span>
+                </a> 
+            {% endfor %}
+        </ul>
+        
+    </div>
+
+{% endblock content %}

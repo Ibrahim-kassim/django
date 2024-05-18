@@ -1,0 +1,22 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title">{{ room.name }}</h2>
+          <p class="card-text">{{ room.description }}</p>
+          <p class="card-text mb-2"><small class="text-muted">Hosted by {{ room.host.username }}</small></p>
+          <p class="card-text">{{ room.topic.name }}</p>
+          <p>Created at: {{ room.created }}</p>
+          <p>Updated at: {{ room.updated }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}
